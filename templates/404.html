@@ -1,0 +1,19 @@
+      <div class="view">
+        <header>
+          <p class="eyebrow">404</p>
+          <h1>Page not found</h1>
+          <p class="lead">Looking for a blog post? The blog now lives at <a href="https://blog.rupeshbhandari.com.np/" id="blog-link">blog.rupeshbhandari.com.np</a>.</p>
+        </header>
+        <p><a href="/">Go to the home page</a></p>
+      </div>
+      <script>
+        /* Old blog addresses kept their paths on blog., so offer the same path there. */
+        (function () {
+          var p = location.pathname;
+          if (/^\/(posts|categories|tags|archives)\//.test(p)) {
+            var a = document.getElementById("blog-link");
+            a.href = "https://blog.rupeshbhandari.com.np" + p;
+            a.textContent = "blog.rupeshbhandari.com.np" + decodeURI(p);
+          }
+        })();
+      </script>

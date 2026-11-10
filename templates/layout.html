@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rupesh Bhandari">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="https://www.rupeshbhandari.com.np/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rupesh Bhandari: Business Central functional consultant, coder by habit">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rpshbhandari">
+  <meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1b1e" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{root}}brand/img/rb-96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{root}}brand/img/rb-180.png">
+  <!-- Same saved-theme key and values as books. (mdBook's), so the code reads the same on every site. -->
+  <script>try{var t=localStorage.getItem("mdbook-theme");if(t==="light"||t==="rust")document.documentElement.dataset.theme="light";else if(t==="coal"||t==="navy"||t==="ayu")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+  <link rel="preload" href="{{root}}brand/fonts/cascadia-code-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{root}}brand/brand.css">
+  <link rel="stylesheet" href="{{root}}home.css">{{jsonld}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RSQS9XPQ7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-8RSQS9XPQ7");</script>
+</head>
+<body>
+  {{icons}}
+  <div class="app">
+    <aside class="side" id="side">
+      <div class="side-top">
+        <a href="{{home}}" class="brand"><img src="{{root}}brand/img/rb-180.png" alt="" width="32" height="32"><span>Rupesh Bhandari <span class="brand-sub">home</span></span></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="side-body">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+        </button>
+      </div>
+      <div class="side-body" id="side-body">
+        <nav aria-label="Pages"><ul class="nav-links">
+          <li><a href="{{home}}"{{current_home}}>Home</a></li>
+          <li><a href="{{root}}projects/"{{current_projects}}>Projects <span class="n tab">{{project_count}}</span></a></li>
+          <li><a href="{{root}}about/"{{current_about}}>About</a></li>
+        </ul></nav>
+        <div class="sb">
+          <div class="mode">
+            <button type="button" class="ib" id="mode-toggle" data-mode="auto" aria-label="Theme: System" aria-haspopup="true" aria-expanded="false" aria-controls="mode-menu">
+              <svg class="m-light" aria-hidden="true"><use href="#i-sun"/></svg><svg class="m-dark" aria-hidden="true"><use href="#i-moon"/></svg><svg class="m-auto" aria-hidden="true"><use href="#i-display"/></svg>
+            </button>
+            <div class="mode-menu" id="mode-menu" hidden>
+              <button type="button" data-theme-set="light"><svg aria-hidden="true"><use href="#i-sun"/></svg>Light</button>
+              <button type="button" data-theme-set="dark"><svg aria-hidden="true"><use href="#i-moon"/></svg>Dark</button>
+              <button type="button" data-theme-set="auto"><svg aria-hidden="true"><use href="#i-display"/></svg>System</button>
+            </div>
+          </div>
+          <span class="dot" aria-hidden="true"></span>
+          <a class="ib" href="https://github.com/rpshbhandari" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+          <a class="ib" href="https://www.linkedin.com/in/rpshbhandari" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          <a class="ib" href="https://blog.rupeshbhandari.com.np/" aria-label="Blog" title="Blog" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-blog"/></svg></a>
+          <a class="ib" href="https://tools.rupeshbhandari.com.np/" aria-label="Tools" title="Tools" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-tools"/></svg></a>
+          <a class="ib" href="https://books.rupeshbhandari.com.np/" aria-label="Books" title="Books" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-books"/></svg></a>
+          <a class="ib" href="https://data.rupeshbhandari.com.np/" aria-label="Data" title="Data" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-data"/></svg></a>
+          <a class="ib" href="https://twitter.com/rpshbhandari" aria-label="X" title="X" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
+          <a class="ib email-link" href="#" aria-label="Email" title="Email"><svg aria-hidden="true"><use href="#i-email"/></svg></a>
+        </div>
+      </div>
+    </aside>
+    <main>
+{{main}}
+    </main>
+  </div>
+  <script>
+    (function () {
+      "use strict";
+      var root = document.documentElement;
+      /* Light / Dark / System (auto), stored the way mdBook stores it ("light", "coal", or nothing for System). */
+      var KEY = "mdbook-theme";
+      var BG = { light: "#f5f8f6", dark: "#1b1b1e" };
+      var LABEL = { light: "Light", dark: "Dark", auto: "System" };
+      var modeToggle = document.getElementById("mode-toggle");
+      var modeMenu = document.getElementById("mode-menu");
+      function apply(mode) {
+        if (mode === "light" || mode === "dark") root.dataset.theme = mode;
+        else delete root.dataset.theme;
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+          m.content = BG[mode] || (/dark/.test(m.media) ? BG.dark : BG.light);
+        });
+        modeToggle.dataset.mode = mode;
+        modeToggle.setAttribute("aria-label", "Theme: " + LABEL[mode]);
+        modeMenu.querySelectorAll("button").forEach(function (b) {
+          var on = b.dataset.themeSet === mode;
+          b.classList.toggle("on", on);
+          b.setAttribute("aria-pressed", String(on));
+        });
+      }
+      function showMenu(open) {
+        modeMenu.hidden = !open;
+        modeToggle.setAttribute("aria-expanded", String(open));
+      }
+      apply(root.dataset.theme || "auto");
+      modeToggle.addEventListener("click", function () { showMenu(modeMenu.hidden); });
+      modeMenu.addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-theme-set]");
+        if (!b) return;
+        var mode = b.dataset.themeSet;
+        apply(mode);
+        showMenu(false);
+        modeToggle.focus();
+        try {
+          if (mode === "auto") localStorage.removeItem(KEY);
+          else localStorage.setItem(KEY, mode === "dark" ? "coal" : "light");
+        } catch (err) {}
+      });
+      document.addEventListener("click", function (e) {
+        if (!modeMenu.hidden && !e.target.closest(".mode")) showMenu(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !modeMenu.hidden) { showMenu(false); modeToggle.focus(); }
+      });
+      /* Built here so the address isn't sitting in the page for scrapers, as on the other sites. */
+      document.querySelectorAll(".email-link").forEach(function (a) {
+        a.href = "mailto:" + ["rpshbhandari", "gmail.com"].join("@");
+      });
+      /* Phone-width menu */
+      var side = document.getElementById("side");
+      var toggle = document.getElementById("menu-toggle");
+      toggle.addEventListener("click", function () {
+        var open = !side.classList.contains("open");
+        side.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+    })();
+  </script>
+</body>
+</html>

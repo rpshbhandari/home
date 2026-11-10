@@ -1,0 +1,27 @@
+name: Check outside links
+
+# Weekly, so a moved repo or a deleted post shows up as a failed run (and GitHub's email about it)
+# instead of a broken link nobody notices. Deploys only check internal links, to stay fast.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 3 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Build the site
+        run: python3 scripts/build.py
+
+      - name: Check every link, inside and out
+        run: python3 scripts/check_links.py --external

@@ -1,0 +1,153 @@
+/* Styles for www.rupeshbhandari.com.np. Loaded after brand/brand.css, which holds the fonts and
+   raw palette shared with tools. and books.; this file maps them to the page's own tokens. */
+
+:root {
+  color-scheme: light;
+  --bg: var(--light-bg); --fg: var(--light-fg); --mu: var(--light-mu); --ln: var(--light-ln);
+  --ln2: var(--light-ln2); --field: var(--light-field); --ac: var(--light-ac); --soft: var(--light-soft);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: var(--dark-bg); --fg: var(--dark-fg); --mu: var(--dark-mu); --ln: var(--dark-ln);
+    --ln2: var(--dark-ln2); --field: var(--dark-field); --ac: var(--dark-ac); --soft: var(--dark-soft);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: var(--dark-bg); --fg: var(--dark-fg); --mu: var(--dark-mu); --ln: var(--dark-ln);
+  --ln2: var(--dark-ln2); --field: var(--dark-field); --ac: var(--dark-ac); --soft: var(--dark-soft);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--mono); font-size: 14px; line-height: 1.55; }
+a { color: var(--fg); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; text-wrap: balance; }
+.tab { font-variant-numeric: tabular-nums; }
+
+/* App shell, as on tools. and books. */
+.app { display: grid; grid-template-columns: 240px minmax(0, 1fr); min-height: 100vh; }
+.side { border-right: 1px solid var(--ln); padding: 28px 16px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
+.side-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.brand { position: relative; display: flex; align-items: center; gap: 10px; padding: 0 12px 24px; font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--fg); text-decoration: none; }
+.brand img { border-radius: 50%; flex: none; }
+.brand-sub { display: block; font-family: var(--mono); font-weight: 400; font-size: 12px; color: var(--mu); }
+.menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--ln2); border-radius: 8px; background: transparent; align-items: center; justify-content: center; cursor: pointer; }
+.side-body { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.nav-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.nav-links a { display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: var(--mu); text-decoration: none; }
+.nav-links a:hover { color: var(--fg); }
+.nav-links a[aria-current="page"] { background: var(--fg); color: var(--bg); }
+.nav-links .n { font-size: 12px; opacity: .8; }
+/* Sidebar footer, the same on all the sites: theme menu, then the other sites and contacts */
+.sb { margin-top: auto; border-top: 1px solid var(--ln); padding-top: 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 2px; }
+.ib { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--mu); text-decoration: none; cursor: pointer; }
+.ib:hover, .ib[aria-expanded="true"] { color: var(--fg); }
+.ib svg { width: 16px; height: 16px; overflow: visible; }
+.sb .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--mu); margin: 0 6px; }
+.mode { position: relative; }
+.mode .ib svg { display: none; }
+.mode .ib[data-mode="light"] .m-light, .mode .ib[data-mode="dark"] .m-dark, .mode .ib[data-mode="auto"] .m-auto { display: block; }
+.mode-menu { position: absolute; bottom: calc(100% + 6px); left: 0; z-index: 10; min-width: 160px; padding: 4px; border: 1px solid var(--ln2); border-radius: 10px; background: var(--bg); box-shadow: 0 1px 4px rgba(0, 0, 0, .25); }
+.mode-menu[hidden] { display: none; }
+.mode-menu button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 36px; padding: 0 10px; border: 0; border-radius: 6px; background: transparent; color: var(--mu); text-align: left; cursor: pointer; }
+.mode-menu button:hover { color: var(--fg); }
+.mode-menu button.on { background: var(--fg); color: var(--bg); }
+.mode-menu svg { width: 14px; height: 14px; overflow: visible; }
+
+/* Main column */
+/* Fills the space beside the sidebar up to 1560px, then stays centred so very wide screens look balanced. */
+main { width: 100%; max-width: 1560px; margin-inline: auto; padding: 44px clamp(24px, 3.5vw, 64px) 64px; min-width: 0; }
+.view { display: flex; flex-direction: column; gap: 44px; }
+.eyebrow { margin: 0 0 6px; font-size: 12px; color: var(--mu); letter-spacing: .04em; }
+h1 { font-size: 40px; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 14px; }
+.lead { margin: 0; font-size: 15px; }
+.lead em { font-style: normal; background: var(--soft); padding: 0 4px; border-radius: 3px; }
+.section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+h2 { font-size: 20px; margin: 0; }
+.more { font-size: 12px; color: var(--mu); text-decoration: none; white-space: nowrap; }
+.more:hover { color: var(--fg); }
+
+/* Cards, as on books. */
+/* auto-fit, so a short row stretches across instead of leaving empty slots on the right */
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+.grid li { display: flex; min-width: 0; }
+/* The four site cards: one row of four, or two by two, never three and one. */
+.grid.sites { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1360px) { .grid.sites { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid.sites { grid-template-columns: minmax(0, 1fr); } }
+/* The six popular tools: three by two, or two by three, never five and one. */
+.grid.tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.tools .card { min-height: 0; }
+@media (min-width: 1200px) { .grid.tools { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid.tools { grid-template-columns: minmax(0, 1fr); } }
+.card { flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 150px; border: 1px solid var(--ln); border-radius: 10px; padding: 20px; color: inherit; text-decoration: none; min-width: 0; }
+a.card:hover { border-color: var(--fg); }
+.card-top { display: flex; justify-content: space-between; gap: 12px; font-size: 12px; color: var(--mu); }
+.card-top span:last-child { white-space: nowrap; }
+.card h3 { margin: 0; font-size: 18px; overflow-wrap: anywhere; }
+.card p { margin: 0; color: var(--mu); flex: 1; overflow-wrap: anywhere; }
+.host { font-size: 12px; color: var(--ac); overflow-wrap: anywhere; }
+.site .ic { width: 18px; height: 18px; color: var(--ac); }
+.site .ic svg { width: 18px; height: 18px; display: block; overflow: visible; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-block; font-size: 11px; color: var(--mu); border: 1px solid var(--ln); border-radius: 999px; padding: 1px 8px; }
+
+/* Latest posts: a dated list */
+.posts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ln); }
+.posts li { border-bottom: 1px solid var(--ln); }
+.posts a { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 4px 20px; padding: 14px 4px; text-decoration: none; color: inherit; }
+.posts a:hover .pt { text-decoration: underline; text-underline-offset: 3px; }
+.pd { color: var(--mu); font-size: 12px; padding-top: 2px; }
+.pt { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.pc { grid-column: 2; color: var(--mu); font-size: 12px; }
+
+/* Home: latest posts and selected work stack, then sit side by side on wide screens. */
+.home-cols { display: grid; gap: 44px; }
+@media (min-width: 1600px) {
+  .home-cols { grid-template-columns: minmax(0, 1.75fr) minmax(320px, 1fr); align-items: start; }
+  .home-cols .grid { grid-template-columns: minmax(0, 1fr); }
+  .home-cols .card { min-height: 0; }
+}
+
+/* Projects page */
+.group { display: flex; flex-direction: column; gap: 14px; }
+.group-sub { margin: -6px 0 2px; color: var(--mu); max-width: 62ch; }
+
+/* About page */
+.prose { max-width: 64ch; display: flex; flex-direction: column; gap: 14px; }
+.prose p { margin: 0; }
+.facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 10px 24px; margin: 0; padding: 18px 0; border-block: 1px solid var(--ln); max-width: 64ch; }
+.facts dt { color: var(--mu); font-size: 12px; padding-top: 1px; }
+.facts dd { margin: 0; min-width: 0; }
+/* About: the text and the facts stack, then the facts become a column beside the text. */
+.about-cols { display: flex; flex-direction: column; gap: 28px; }
+@media (min-width: 1200px) {
+  .about-cols { display: grid; grid-template-columns: minmax(0, 68ch) minmax(240px, 340px); gap: 64px; align-items: start; }
+  .about-cols .facts { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 4px 0 4px 28px; border-block: 0; border-left: 1px solid var(--ln); }
+  .about-cols .facts dd + dt { margin-top: 14px; }
+}
+
+@media (max-width: 760px) {
+  .app { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; }
+  .side { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--ln); padding: 8px 16px; }
+  .brand { padding: 0; }
+  .menu-toggle { display: flex; }
+  .side-body { display: none; padding: 12px 0; }
+  .side.open .side-body { display: flex; }
+  .sb { margin-top: 12px; }
+  .ib { width: 44px; height: 44px; }
+  .mode-menu button { min-height: 44px; }
+  main { padding: 24px 16px 48px; }
+  h1 { font-size: 30px; }
+  .posts a { grid-template-columns: minmax(0, 1fr); }
+  .pc { grid-column: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card, .nav-links a { transition: border-color .15s, color .15s; }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- Source of static/img/social-card.png, the 1200×630 image shown when a page is shared.
+     After editing, render it again with Chrome from the repo root:
+
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
+       --hide-scrollbars --window-size=1200,630 --screenshot=static/img/social-card.png \
+       "file://$PWD/scripts/social-card.html"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../static/brand/brand.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    box-sizing: border-box; padding: 72px 88px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: var(--light-bg); color: var(--light-fg); font-family: var(--mono);
+    border-top: 16px solid var(--light-ac);
+  }
+  .brand { display: flex; align-items: center; gap: 20px; font-size: 26px; color: var(--light-mu); }
+  .brand img { width: 64px; height: 64px; }
+  h1 { font-family: var(--display); font-size: 92px; line-height: 1; margin: 0 0 28px; letter-spacing: -1px; }
+  p { font-size: 32px; line-height: 1.4; margin: 0; max-width: 960px; color: var(--light-mu); }
+  em { font-style: normal; color: var(--light-ac); font-weight: 700; }
+  .sites { display: flex; gap: 14px; font-size: 24px; }
+  .sites span { background: var(--light-soft); color: var(--light-ac); padding: 8px 18px; border-radius: 6px; }
+</style>
+</head>
+<body>
+  <div class="brand"><img src="../static/brand/img/rb-180.png" alt="">rupeshbhandari.com.np</div>
+  <div>
+    <h1>Rupesh Bhandari</h1>
+    <p><em>Business Central</em> functional consultant by profession, coder by habit. Free tools, books and open data on Business Central, Python and Nepal's tax rules.</p>
+  </div>
+  <div class="sites"><span>blog</span><span>tools</span><span>books</span><span>data</span></div>
+</body>
+</html>

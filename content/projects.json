@@ -1,0 +1,146 @@
+{
+  "groups": [
+    {
+      "id": "business-central",
+      "title": "Business Central",
+      "intro": "Extensions and tooling for Microsoft Dynamics 365 Business Central.",
+      "items": [
+        {
+          "name": "AL Page Navigator",
+          "kind": "VS Code extension",
+          "meta": "v0.1.0",
+          "url": "https://github.com/rpshbhandari/al-page-navigator",
+          "description": "Inserts a Page Navigator page into an AL project and picks a free page ID from app.json's ranges.",
+          "tags": ["TypeScript", "AL"],
+          "featured": true
+        },
+        {
+          "name": "Dimension Correction",
+          "kind": "BC extension",
+          "meta": "v1.0.0.1",
+          "url": "https://github.com/rpshbhandari/Dimension-Correction",
+          "description": "Corrects dimensions on posted documents and ledger entries through a worksheet, with an audit log.",
+          "tags": ["AL"],
+          "featured": true
+        },
+        {
+          "name": "MailMyReport",
+          "kind": "BC extension",
+          "meta": "v1.0.0.0",
+          "url": "https://github.com/rpshbhandari/MailMyReport",
+          "description": "Emails generated reports to configured recipients, with per-report subject, body and recipients.",
+          "tags": ["AL", "AGPLv3"]
+        },
+        {
+          "name": "BC Integration",
+          "kind": "Integration",
+          "meta": "Python",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/BCIntegration",
+          "description": "Python clients for Business Central's OData web services: filters, paging, create, update and delete.",
+          "tags": ["OData", "requests"]
+        }
+      ]
+    },
+    {
+      "id": "nepal",
+      "title": "Nepal tax and finance",
+      "intro": "Nepal's tax rates and payment systems, as open data and code.",
+      "items": [
+        {
+          "name": "Nepal tax data",
+          "kind": "Open data",
+          "meta": "JSON",
+          "url": "https://github.com/rpshbhandari/data",
+          "description": "Income tax slabs, TDS, VAT, depreciation pools and NEPSE charges as versioned JSON, read by the calculators on Tools.",
+          "tags": ["JSON", "GitHub Pages"],
+          "featured": true
+        },
+        {
+          "name": "NCHL Integration",
+          "kind": "Payments",
+          "meta": "Python",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/NCHLIntegration",
+          "description": "Signs transaction requests with a PKCS#12 certificate and sends them to NCHL.",
+          "tags": ["PKCS#12"]
+        },
+        {
+          "name": "IRD PAN lookup",
+          "kind": "Lookup",
+          "meta": "Python",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/IRD",
+          "description": "Looks up PAN details from the Inland Revenue Department of Nepal.",
+          "tags": ["requests"]
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "title": "Python",
+      "more": {"label": "All 13 in Python-Projects", "url": "https://github.com/rpshbhandari/Python-Projects"},
+      "items": [
+        {
+          "name": "PyExam CLI",
+          "kind": "CLI app",
+          "meta": "SQLite",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/PyExamCLI",
+          "description": "Register, log in, take exams and see results in the terminal, with a rich UI."
+        },
+        {
+          "name": "CBE",
+          "kind": "Web app",
+          "meta": "Django",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/CBE",
+          "description": "Online exam site: accounts, a question bank and timed exams."
+        },
+        {
+          "name": "Online Quiz System",
+          "kind": "Web app",
+          "meta": "Django",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/OnlineQuizSystem",
+          "description": "Quizzes answered one question at a time, with results and a leaderboard."
+        },
+        {
+          "name": "Web Server",
+          "kind": "Networking",
+          "meta": "sockets",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/WebServer",
+          "description": "An HTTP server on raw sockets that serves static files, with no framework."
+        },
+        {
+          "name": "COVID-19 in India",
+          "kind": "Analysis",
+          "meta": "pandas",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/COVID19DataAnalysis",
+          "description": "A look at India's first cases, January to March 2020, with pandas and matplotlib."
+        },
+        {
+          "name": "Airplane Management",
+          "kind": "Fixed assets",
+          "meta": "pandas",
+          "url": "https://github.com/rpshbhandari/Python-Projects/tree/main/AirplaneManagementSystem",
+          "description": "Aircraft and parts as fixed assets, with flight hours, cycles and days."
+        }
+      ]
+    },
+    {
+      "id": "contributions",
+      "title": "Contributions",
+      "items": [
+        {
+          "name": "django-esewa",
+          "kind": "Merged PR #2",
+          "meta": "+155 −40",
+          "url": "https://github.com/hehenischal/django-esewa/pull/2",
+          "description": "Refactored eSewa signature generation and verification, with documentation and type hints."
+        },
+        {
+          "name": "nepal-gateways",
+          "kind": "Merged PR #9",
+          "meta": "+37 −42",
+          "url": "https://github.com/polymorphisma/nepal-gateways/pull/9",
+          "description": "Made type hints consistent in the core and the eSewa client."
+        }
+      ]
+    }
+  ]
+}

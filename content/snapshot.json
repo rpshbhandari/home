@@ -1,0 +1,95 @@
+{
+  "note": "Used when a live source can't be reached at build time. Refresh with: python3 scripts/build.py --update-snapshot",
+  "updated": "2026-10-28",
+  "counts": {
+    "blog": 44,
+    "tools": 48,
+    "books": 6,
+    "data": 8
+  },
+  "posts": [
+    {
+      "title": "IFRS 16 Leases Explained: Right-of-Use Assets, Lease Liabilities and a Worked Example",
+      "url": "https://blog.rupeshbhandari.com.np/posts/ifrs-16-leases-explained/",
+      "date": "2026-10-19",
+      "categories": [
+        "Finance",
+        "Accounting"
+      ]
+    },
+    {
+      "title": "NEPSE Charges and Capital Gains Tax: What You Really Pay to Buy and Sell Shares",
+      "url": "https://blog.rupeshbhandari.com.np/posts/nepse-charges-and-capital-gains-tax/",
+      "date": "2026-10-19",
+      "categories": [
+        "Finance",
+        "Personal Finance"
+      ]
+    },
+    {
+      "title": "Nepal Salary Tax for FY 2083/84: New Slabs, Deductions and a Worked Example",
+      "url": "https://blog.rupeshbhandari.com.np/posts/nepal-salary-tax-fy-2083-84/",
+      "date": "2026-10-19",
+      "categories": [
+        "Finance",
+        "Personal Finance"
+      ]
+    },
+    {
+      "title": "Understanding Maximum No. of Attempts to Run in Business Central's Job Queue",
+      "url": "https://blog.rupeshbhandari.com.np/posts/bc-job-queue-maximum-attempts-to-run/",
+      "date": "2026-09-15",
+      "categories": [
+        "Dynamics 365 Business Central",
+        "Job Queue"
+      ]
+    },
+    {
+      "title": "Fixed Application in Business Central: The Mechanism Behind Exact Cost Reversing",
+      "url": "https://blog.rupeshbhandari.com.np/posts/fixed-application-in-business-central/",
+      "date": "2026-09-05",
+      "categories": [
+        "Dynamics 365 Business Central",
+        "Inventory Costing"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Nepal Salary Tax Calculator",
+      "description": "Annual income tax on a salary in Nepal for FY 2080/81 to 2083/84, with SSF, EPF, CIT, insurance and tuition deductions and a slab-by-slab breakdown.",
+      "category": "Finance",
+      "url": "https://tools.rupeshbhandari.com.np/finance/salary-tax/"
+    },
+    {
+      "name": "VAT and TDS Calculator",
+      "description": "Add or remove VAT and work out TDS by payment type for FY 2083/84, with the invoice total and the net amount payable.",
+      "category": "Finance",
+      "url": "https://tools.rupeshbhandari.com.np/finance/vat-tds/"
+    },
+    {
+      "name": "NEPSE Share Calculator",
+      "description": "Buy and sell costs with broker commission, SEBON fee, DP charge and capital gains tax for the trade date, plus bonus/right price adjustment and WACC.",
+      "category": "Finance",
+      "url": "https://tools.rupeshbhandari.com.np/finance/nepse-calculator/"
+    },
+    {
+      "name": "AD to BS Date Converter",
+      "description": "Convert English (AD) dates to Nepali Bikram Sambat (BS) and back, from BS 2000 to 2086, with the date in Nepali, the weekday and the fiscal year.",
+      "category": "Utilities",
+      "url": "https://tools.rupeshbhandari.com.np/utilities/ad-bs-converter/"
+    },
+    {
+      "name": "Merge PDF",
+      "description": "Combine several PDFs into one file, in the order you choose. Files never leave your device.",
+      "category": "PDF",
+      "url": "https://tools.rupeshbhandari.com.np/pdf/merge/"
+    },
+    {
+      "name": "OData & API URL Builder",
+      "description": "Build Business Central API v2.0, custom API and OData web service URLs with filters, fields, expands and sorting, correctly quoted and encoded, and copy them as curl, Python or Power Query.",
+      "category": "Business Central",
+      "url": "https://tools.rupeshbhandari.com.np/business-central/odata-url-builder/"
+    }
+  ]
+}
